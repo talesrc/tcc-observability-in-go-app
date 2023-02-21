@@ -1,11 +1,11 @@
 package main
 
 import (
-	"tcc-observability-in-go-app/configs"
 	"tcc-observability-in-go-app/pkg/models"
+	"tcc-observability-in-go-app/pkg/repositories"
 )
 
 func main() {
-	configs.ConnectToDB()
-	configs.DB.AutoMigrate(&models.User{})
+	repositories.ConnectToDB()
+	repositories.DB.AutoMigrate(&models.User{})
 }

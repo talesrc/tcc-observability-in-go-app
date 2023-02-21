@@ -3,12 +3,13 @@ package main
 import (
 	"fmt"
 	"tcc-observability-in-go-app/configs"
+	"tcc-observability-in-go-app/pkg/repositories"
 
 	"github.com/gin-gonic/gin"
 )
 
 func init() {
-	configs.ConnectToDB()
+	repositories.ConnectToDB()
 }
 
 func main() {
